@@ -6,67 +6,49 @@ Learn Python for data science.
 - [Operations](#operations)
 - [Order of operations](#order-of-operations)
 - [Type conversion](#type-conversion)
+- [Function](#function)
+  - [Lambda](#lambda)
 
 ### Built in functions
 - print
-
-code
-```python
-print('Hello World!')
 ```
-output
-```
+>>> print('Hello World!')
 Hello World!
 ```
 
 - type
-
-code
-```python
-print(type(1))
-print(type(1.23))
-print(type('aof'))
 ```
-output
-```
-<class 'int'>
-<class 'float'>
-<class 'str'>
+>>> type(1)
+<type 'int'>
+>>> type(1.23)
+<type 'float'>
+>>> type('aof')
+<type 'str'>
 ```
 
 - min/max
-
-code
-```python
-print(min(1, 2, 3, 4, 5))
-print(max(1, 2, 3, 4, 5))
 ```
-output
-```
+>>> min(1, 2, 3, 4, 5)
 1
+>>> max(1, 2, 3, 4, 5)
 5
 ```
 
 ### Operations
-
-code
-```python
-print(1 + 1)
-print(1 - 1)
-print(2 * 3)
-print(6 / 3)   # Return float
-print(5 // 3)  # Floor division return int
-print(8 % 3)
-print(2 ** 3)  # 2 power of 3
 ```
-output
-```
+>>> 1 + 1
 2
+>>> 1 - 1
 0
+>>> 2 * 3
 6
+>>> 6 / 3
 2.0
+>>> 5 // 3
 1
+>>> 8 % 3
 2
+>>> 2 ** 3
 8
 ```
 
@@ -74,16 +56,27 @@ output
 Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D**ivision, **A**ddition/**S**ubtraction) convention.
 
 ### Type conversion
-
-code
-```python
-print(int(1.23))
-print(float(1))
-print(int('456') + 78)
 ```
-output
-```
+>>> int(1.23)
 1
+>>> float(1)
 1.0
+>>> int('456') + 78
 534
+```
+
+### Function
+```
+>>> def sum(a, b):
+...     return a + b
+...
+>>> sum(1, 2)
+3
+```
+
+#### Lambda
+```
+>>> sub = lambda a, b: a - b
+>>> sub(5, 1)
+4
 ```
