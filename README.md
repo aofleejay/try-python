@@ -9,7 +9,7 @@ Learn Python for data science.
 - [Function](#function)
   - [Lambda](#lambda)
 
-### Built in functions
+## Built in functions
 - print
 ```
 >>> print('Hello World!')
@@ -34,7 +34,7 @@ Hello World!
 5
 ```
 
-### Operations
+## Operations
 ```
 >>> 1 + 1
 2
@@ -52,10 +52,10 @@ Hello World!
 8
 ```
 
-### Order of operations
+## Order of operations
 Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D**ivision, **A**ddition/**S**ubtraction) convention.
 
-### Type conversion
+## Type conversion
 ```
 >>> int(1.23)
 1
@@ -65,7 +65,7 @@ Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D
 534
 ```
 
-### Function
+## Function
 ```
 >>> def sum(a, b):
 ...     return a + b
@@ -74,7 +74,7 @@ Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D
 3
 ```
 
-#### Lambda
+### Lambda
 ```
 >>> sub = lambda a, b: a - b
 >>> sub(5, 1)
