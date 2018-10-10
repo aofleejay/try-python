@@ -8,6 +8,9 @@ Learn Python for data science.
 - [Type conversion](#type-conversion)
 - [Function](#function)
   - [Lambda](#lambda)
+- [Conditional](#conditional)
+- [Lists](#lists)
+- [Tuples](#tuples)
 
 ## Built in functions
 - print
@@ -24,6 +27,8 @@ Hello World!
 <type 'float'>
 >>> type('aof')
 <type 'str'>
+>>> type(True)
+<type 'bool'>
 ```
 
 - min/max
@@ -63,6 +68,8 @@ Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D
 1.0
 >>> int('456') + 78
 534
+>>> bool(0)
+False
 ```
 
 ## Function
@@ -79,4 +86,89 @@ Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D
 >>> sub = lambda a, b: a - b
 >>> sub(5, 1)
 4
+```
+
+## Conditional
+```
+>>> if x == 0:
+...     print('Zero')
+... elif x > 0:
+...     print('Positive')
+... else:
+...     print('Negative')
+```
+
+## Lists
+```
+>>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
+```
+Access elements at the end
+```
+>>> animals[-1]
+'snake'
+```
+Slicing from index 0 but not including index 3
+```
+>>> animals[0:3]
+['dog', 'cat', 'bird']
+>>> animals[:3]
+['dog', 'cat', 'bird']
+```
+Slicing from index 2 to the end of the list
+```
+>>> animals[2:]
+['bird', 'fish', 'snake']
+```
+Slicing last 3 elements
+```
+>>> animals[-3:]
+['bird', 'fish', 'snake']
+```
+List functions
+```
+>>> len(animals)
+5
+
+>>> sorted(animals)
+['bird', 'cat', 'dog', 'fish', 'snake']
+
+>>> sum([1, 2, 3, 4, 5])
+15
+
+>>> animals.append('cow')
+>>> animals
+['dog', 'cat', 'bird', 'fish', 'snake', 'cow']
+
+>>> animals.pop()
+'cow'
+
+>>> animals.index('fish')
+3
+
+>>> 'cat' in animals
+True
+```
+
+## Tuples
+```
+>>> gender = ('male', 'female')
+>>> gender
+('male', 'female')
+```
+Tuple cannot be modified
+```
+>>> gender[0] = 'foo'
+TypeError: 'tuple' object does not support item assignment
+```
+Variable assigment from tuple
+
+```
+>>> def getGender():
+...     return ('male', 'female')
+...
+>>> maleLabel, femaleLabel = getGender()
+>>> maleLabel
+'male'
+>>> femaleLabel
+'female'
 ```
