@@ -16,6 +16,8 @@ Learn Python for data science.
     - [List comprehensions](#list-comprehensions)
   - [While loop](#while-loop)
 - [String](#string)
+- [Dictionaries](#dictionaries)
+  - [Dictionary comprehensions](#dictionary-comprehensions)
 
 # Built in functions
 - print
@@ -338,4 +340,37 @@ Loop
 ```
 >>> [letter.upper() for letter in 'Hello World!']
 ['H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D', '!']
+```
+
+# Dictionaries
+```
+>>> me = { 'name': 'aof', 'age': 25 }
+>>> me['name']
+'aof'
+```
+
+## Dictionary comprehensions
+```
+>>> {key.upper(): me[key] for key in { 'name': 'aof', 'age': 25 }}
+{'NAME': 'aof', 'AGE': 25}
+```
+
+Check if key is exsist in dictionary
+```
+>>> me = { 'name': 'aof', 'age': 25 }
+>>> 'name' in me
+True
+```
+
+.keys(), values() and .items()
+```
+>>> me = { 'name': 'aof', 'age': 25 }
+>>> me.keys()
+dict_keys(['name', 'age'])
+
+>>> me.values()
+dict_values(['aof', 25])
+
+>>> me.items()
+dict_items([('name', 'aof'), ('age', 25)])
 ```
