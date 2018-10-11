@@ -183,31 +183,34 @@ Loop over elements
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
 >>> for animal in animals:
-...     print(animal, end = ' ')
-'dog' 'cat' 'bird' 'fish' 'snake'
+...     print(animal, end=', ')
+... 
+dog, cat, bird, fish, snake, 
 ```
 Loop over index
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
 >>> for i in range(len(animals)):
-...     print(animals[i], end = ' ')
-'dog' 'cat' 'bird' 'fish' 'snake'
+...     print(animals[i], end = ', ')
+...
+dog, cat, bird, fish, snake, 
 ```
 Enumerate
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
 >>> for i, animal in enumerate(animals):
 ...     print(i, animal, sep = ':', end = ', ')
-0:'dog', 1:'cat', 2:'bird', 3:'fish', 4:'snake', 
+... 
+0:dog, 1:cat, 2:bird, 3:fish, 4:snake, 
 ```
 ### List comprehensions
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
->>> animal for animal in animals
-'dog' 'cat' 'bird' 'fish' 'snake'
+>>> [animal for animal in animals]
+['dog', 'cat', 'bird', 'fish', 'snake']
 
->>> animal for animal in animals if len(animal) > 3
-'bird' 'fish' 'snake'
+>>> [animal for animal in animals if len(animal) > 3]
+['bird', 'fish', 'snake']
 ```
 ## While loop
 ```
@@ -215,5 +218,6 @@ Enumerate
 >>> while i < 5:
 ...     print(i, end = ' ')
 ...     i += 1
-0 1 2 3 4
+... 
+0 1 2 3 4 
 ```
