@@ -6,7 +6,7 @@ Learn Python for data science.
 - [Operations](#operations)
   - [Order of operations](#order-of-operations)
 - [Type conversion](#type-conversion)
-- [Function](#function)
+- [Functions](#functions)
   - [Lambda](#lambda)
 - [Conditional](#conditional)
 - [Lists](#lists)
@@ -57,12 +57,25 @@ World
 
 >>> type((1, 2))
 <class 'tuple'>
+
+>>> type([1, 2, 3])
+<class 'list'>
+
+>>> def sayHi():
+...     return 'Hi'
+... 
+>>> type(sayHi)
+<class 'function'>
+
+>>> type({ 'name': 'aof', 'age': 25 })
+<class 'dict'>
 ```
 
 - min/max
 ```
 >>> min(1, 2, 3, 4, 5)
 1
+
 >>> max(1, 2, 3, 4, 5)
 5
 ```
@@ -71,16 +84,22 @@ World
 ```
 >>> 1 + 1
 2
+
 >>> 1 - 1
 0
+
 >>> 2 * 3
 6
+
 >>> 6 / 3
 2.0
+
 >>> 5 // 3
 1
+
 >>> 8 % 3
 2
+
 >>> 2 ** 3
 8
 ```
@@ -92,15 +111,21 @@ Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D
 ```
 >>> int(1.23)
 1
+
 >>> float(1)
 1.0
+
 >>> int('456') + 78
 534
+
 >>> bool(0)
 False
+
+>>> list(range(3))
+[0, 1, 2]
 ```
 
-# Function
+# Functions
 ```
 >>> def sum(a, b):
 ...     return a + b
@@ -130,11 +155,13 @@ False
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
 ```
+
 Access elements at the end
 ```
 >>> animals[-1]
 'snake'
 ```
+
 Slicing from index 0 but not including index 3
 ```
 >>> animals[0:3]
@@ -142,16 +169,19 @@ Slicing from index 0 but not including index 3
 >>> animals[:3]
 ['dog', 'cat', 'bird']
 ```
+
 Slicing from index 2 to the end of the list
 ```
 >>> animals[2:]
 ['bird', 'fish', 'snake']
 ```
+
 Slicing last 3 elements
 ```
 >>> animals[-3:]
 ['bird', 'fish', 'snake']
 ```
+
 List functions
 ```
 >>> len(animals)
@@ -183,13 +213,14 @@ True
 >>> gender
 ('male', 'female')
 ```
+
 Tuple cannot be modified
 ```
 >>> gender[0] = 'foo'
 TypeError: 'tuple' object does not support item assignment
 ```
-Variable assigment from tuple
 
+Variable assigment from tuple
 ```
 >>> def getGender():
 ...     return ('male', 'female')
@@ -211,6 +242,7 @@ Loop over elements
 ... 
 dog, cat, bird, fish, snake, 
 ```
+
 Loop over index
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
@@ -219,6 +251,7 @@ Loop over index
 ...
 dog, cat, bird, fish, snake, 
 ```
+
 Enumerate
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
@@ -227,15 +260,18 @@ Enumerate
 ... 
 0:dog, 1:cat, 2:bird, 3:fish, 4:snake, 
 ```
+
 ### List comprehensions
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
 >>> [animal for animal in animals]
 ['dog', 'cat', 'bird', 'fish', 'snake']
 
+>>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
 >>> [animal for animal in animals if len(animal) > 3]
 ['bird', 'fish', 'snake']
 ```
+
 ## While loop
 ```
 >>> i = 0
@@ -247,14 +283,59 @@ Enumerate
 ```
 
 # String
+String cannot be modified
+```
+>>> text = 'Hello'
+>>> text[0] = 'Y'
+TypeError: 'str' object does not support item assignment
+```
+
+Counting
+```
+>>> len('Hello World!')
+12
+```
+
+Slicing
+```
+>>> text = 'Hello World!'
+>>> text[6:11]
+'World'
+
+>>> text = 'Hello World!'
+>>> text[-6:]
+'World!'
+```
+
 Format
 ```
->>> text = 'World'
->>> 'Hello {}'.format(text)
-'Hello World'
+>>> 'Hello {}'.format('World!')
+'Hello World!'
 
->>> hello = 'Hello'
->>> world = 'World'
->>> '{1} {0} {1}'.format(hello, world)
-'World Hello World'
+>>> '{1} {0} {1}'.format('Hello', 'World!')
+'World! Hello World!'
+```
+
+Splitting
+```
+>>> 'My name is Aof'.split()
+['My', 'name', 'is', 'Aof']
+
+>>> day, month, year = '10/11/2018'.split('/')
+>>> day
+'10'
+>>> year
+'2018'
+```
+
+Join
+```
+>>> "#".join(['My', 'name', 'is', 'Aof'])
+'My#name#is#Aof'
+```
+
+Loop
+```
+>>> [letter.upper() for letter in 'Hello World!']
+['H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D', '!']
 ```
