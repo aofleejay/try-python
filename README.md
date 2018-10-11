@@ -1,18 +1,22 @@
 # Try Python
 Learn Python for data science.
 
-## Table of contents
+# Table of contents
 - [Built in functions](#built-in-functions)
 - [Operations](#operations)
-- [Order of operations](#order-of-operations)
+  - [Order of operations](#order-of-operations)
 - [Type conversion](#type-conversion)
 - [Function](#function)
   - [Lambda](#lambda)
 - [Conditional](#conditional)
 - [Lists](#lists)
 - [Tuples](#tuples)
+- [Loops](#loop)
+  - [For loop](#for-loop)
+    - [List comprehensions](#list-comprehensions)
+  - [While loop](#while-loop)
 
-## Built in functions
+# Built in functions
 - print
 ```
 >>> print('Hello World!')
@@ -39,7 +43,7 @@ Hello World!
 5
 ```
 
-## Operations
+# Operations
 ```
 >>> 1 + 1
 2
@@ -60,7 +64,7 @@ Hello World!
 ## Order of operations
 Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D**ivision, **A**ddition/**S**ubtraction) convention.
 
-## Type conversion
+# Type conversion
 ```
 >>> int(1.23)
 1
@@ -72,7 +76,7 @@ Python using **PEMDAS** ( **P**arentheses, **E**xponents, **M**ultiplication/**D
 False
 ```
 
-## Function
+# Function
 ```
 >>> def sum(a, b):
 ...     return a + b
@@ -81,14 +85,14 @@ False
 3
 ```
 
-### Lambda
+## Lambda
 ```
 >>> sub = lambda a, b: a - b
 >>> sub(5, 1)
 4
 ```
 
-## Conditional
+# Conditional
 ```
 >>> if x == 0:
 ...     print('Zero')
@@ -98,7 +102,7 @@ False
 ...     print('Negative')
 ```
 
-## Lists
+# Lists
 ```
 >>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
 ```
@@ -149,7 +153,7 @@ List functions
 True
 ```
 
-## Tuples
+# Tuples
 ```
 >>> gender = ('male', 'female')
 >>> gender
@@ -171,4 +175,45 @@ Variable assigment from tuple
 'male'
 >>> femaleLabel
 'female'
+```
+
+# Loops
+## For loop
+Loop over elements
+```
+>>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
+>>> for animal in animals:
+...     print(animal, end = ' ')
+'dog' 'cat' 'bird' 'fish' 'snake'
+```
+Loop over index
+```
+>>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
+>>> for i in range(len(animals)):
+...     print(animals[i], end = ' ')
+'dog' 'cat' 'bird' 'fish' 'snake'
+```
+Enumerate
+```
+>>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
+>>> for i, animal in enumerate(animals):
+...     print(i, animal, sep = ':', end = ', ')
+0:'dog', 1:'cat', 2:'bird', 3:'fish', 4:'snake', 
+```
+### List comprehensions
+```
+>>> animals = ['dog', 'cat', 'bird', 'fish', 'snake']
+>>> animal for animal in animals
+'dog' 'cat' 'bird' 'fish' 'snake'
+
+>>> animal for animal in animals if len(animal) > 3
+'bird' 'fish' 'snake'
+```
+## While loop
+```
+>>> i = 0
+>>> while i < 5:
+...     print(i, end = ' ')
+...     i += 1
+0 1 2 3 4
 ```
