@@ -15,24 +15,48 @@ Learn Python for data science.
   - [For loop](#for-loop)
     - [List comprehensions](#list-comprehensions)
   - [While loop](#while-loop)
+- [String](#string)
 
 # Built in functions
 - print
 ```
 >>> print('Hello World!')
 Hello World!
+
+>>> print('Hello', 'World', '!', end = ';', sep = ', ')
+Hello, World, !;
+
+>>> print("""Hello
+... World
+... !""")
+Hello
+World
+!
+
+>>> print('''Hello
+... World
+... !''')
+Hello
+World
+!
 ```
 
 - type
 ```
 >>> type(1)
 <type 'int'>
+
 >>> type(1.23)
 <type 'float'>
+
 >>> type('aof')
 <type 'str'>
+
 >>> type(True)
 <type 'bool'>
+
+>>> type((1, 2))
+<class 'tuple'>
 ```
 
 - min/max
@@ -220,4 +244,17 @@ Enumerate
 ...     i += 1
 ... 
 0 1 2 3 4 
+```
+
+# String
+Format
+```
+>>> text = 'World'
+>>> 'Hello {}'.format(text)
+'Hello World'
+
+>>> hello = 'Hello'
+>>> world = 'World'
+>>> '{1} {0} {1}'.format(hello, world)
+'World Hello World'
 ```
